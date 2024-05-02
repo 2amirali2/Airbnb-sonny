@@ -154,7 +154,7 @@ const SearchPage = () => {
 }
 // export default SearchPage
 
-export function Searchbar() {
+const SearchBar = () => {
   return (
     // You could have a loading skeleton as the `fallback` too
     <Suspense>
@@ -163,6 +163,7 @@ export function Searchbar() {
   )
 }
 
+export default SearchBar
 // export async function  getData() {
 //     const searchResults = await fetch('https://links.papareact.com/isz')
 //     .then(res => res.json())
