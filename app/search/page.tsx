@@ -6,6 +6,7 @@ import Header from "../components/Header"
 import { format } from "date-fns"
 import InfoCard from "../components/InfoCard"
 import Map from "../components/Map"
+import { Suspense } from "react"
 
 const SearchPage = () => {
   const searchResults = [
@@ -151,7 +152,16 @@ const SearchPage = () => {
     </div>
   )
 }
-export default SearchPage
+// export default SearchPage
+
+export function Searchbar() {
+  return (
+    // You could have a loading skeleton as the `fallback` too
+    <Suspense>
+      <SearchPage />
+    </Suspense>
+  )
+}
 
 // export async function  getData() {
 //     const searchResults = await fetch('https://links.papareact.com/isz')
